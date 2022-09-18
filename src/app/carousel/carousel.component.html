@@ -1,0 +1,11 @@
+<p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [numVisible]="5" [showItemNavigators]="mobileView" 
+[thumbnailsPosition]=" mobileView ? 'bottom' : 'left'" [showThumbnailNavigators]="!mobileView" >
+    <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" [alt]="item.alt" style="height: 400px;" />
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+            <img [src]="item.thumbnailImageSrc" />
+        </div>
+    </ng-template>
+</p-galleria>

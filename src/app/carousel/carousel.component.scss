@@ -1,0 +1,31 @@
+@mixin deep{
+    ::ng-deep{
+        @content;
+    }
+}
+@include deep{
+    .p-galleria .p-galleria-item-nav{
+        background: black;
+        border-radius: 20px;
+        width: 2rem;
+        height: 2rem;
+        .p-galleria-item-prev-icon, .p-galleria-item-next-icon {
+            font-size: 0.7rem;
+        }
+    }
+    .p-galleria .p-galleria-item-nav:not(.p-disabled):hover{
+        background: black;
+    }
+    .p-galleria .p-galleria-thumbnail-container {
+            background: none;
+            padding: 0rem 0.25rem;
+
+            .p-galleria-thumbnail-prev,
+            .p-galleria-thumbnail-next {
+                color: black !important;
+            }
+        }
+        .p-link:focus{
+            box-shadow: none;
+        }
+}
